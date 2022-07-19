@@ -1,0 +1,19 @@
+---
+Audio/AnalogIn: 1
+Audio/AnalogOut: 1
+Audio/DigitalIn: 0
+Audio/DigitalOut: 1
+Video/Displayport1.2: 1
+Ethernet/1GB: 1
+Host/Interface: Thunderbolt/3
+Manufacturer/Brand: CalDigit
+Manufacturer/Model: TS3 Plus
+Manufacturer/URL: https://www.caldigit.com/ts3-plus/
+Power/Passthrough: No
+Power/Watts: 87
+Purchase/ASIN: B08F7CR49N
+SDCard/UHSII: 1
+Thunderbolt/3: 1
+USBA/3.1Gen1: 5
+USBC/3.1Gen1: 1
+USBC/3.1Gen2: 1

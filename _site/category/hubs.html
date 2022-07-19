@@ -1,0 +1,104 @@
+<table id="example" class="display nowrap" style="width:100%">
+    <thead>
+        <tr>
+            <th colspan="3">Manufacturer</th>
+            <th colspan="1">Host</th>
+            <th colspan="1">Thunderbolt</th>
+            <th colspan="1">USBA</th>
+            <th colspan="2">USBC</th>
+            <th colspan="1">Video</th>
+            <th colspan="1">Ethernet</th>
+            <th colspan="2">Power</th>
+            <th colspan="4">Audio</th>
+            <th colspan="1">SDCard</th>
+            <th colspan="1">Purchase</th>
+        </tr>
+        <tr>
+            <th colspan="1">Brand</th>
+            <th colspan="1">Model</th>
+            <th colspan="1">URL</th>
+            <th colspan="1">Interface</th>
+            <th colspan="1">3</th>
+            <th colspan="1">3.1Gen1</th>
+            <th colspan="1">3.1Gen1</th>
+            <th colspan="1">3.1Gen2</th>
+            <th colspan="1">Displayport1.2</th>
+            <th colspan="1">1GB</th>
+            <th colspan="1">Watts</th>
+            <th colspan="1">Passthrough</th>
+            <th colspan="1">AnalogIn</th>
+            <th colspan="1">AnalogOut</th>
+            <th colspan="1">DigitalIn</th>
+            <th colspan="1">DigitalOut</th>
+            <th colspan="1">UHSII</th>
+            <th colspan="1">ASIN</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for entry in site.data.category.hubs %}
+        <tr>
+            <td>{{ entry.Manufacturer/Brand }}</td>
+            <td>{{ entry.Manufacturer/Model }}</td>
+            <td>{{ entry.Manufacturer/URL }}</td>
+            <td>{{ entry.Host/Interface }}</td>
+            <td>{{ entry.Thunderbolt/3 }}</td>
+            <td>{{ entry.USBA/3.1Gen1 }}</td>
+            <td>{{ entry.USBC/3.1Gen1 }}</td>
+            <td>{{ entry.USBC/3.1Gen2 }}</td>
+            <td>{{ entry.Video/Displayport1.2 }}</td>
+            <td>{{ entry.Ethernet/1GB }}</td>
+            <td>{{ entry.Power/Watts }}</td>
+            <td>{{ entry.Power/Passthrough }}</td>
+            <td>{{ entry.Audio/AnalogIn }}</td>
+            <td>{{ entry.Audio/AnalogOut }}</td>
+            <td>{{ entry.Audio/DigitalIn }}</td>
+            <td>{{ entry.Audio/DigitalOut }}</td>
+            <td>{{ entry.SDCard/UHSII }}</td>
+            <td>{{ entry.Purchase/ASIN }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    <tfoot>
+        <tr>
+            <th colspan="1">Brand</th>
+            <th colspan="1">Model</th>
+            <th colspan="1">URL</th>
+            <th colspan="1">Interface</th>
+            <th colspan="1">3</th>
+            <th colspan="1">3.1Gen1</th>
+            <th colspan="1">3.1Gen1</th>
+            <th colspan="1">3.1Gen2</th>
+            <th colspan="1">Displayport1.2</th>
+            <th colspan="1">1GB</th>
+            <th colspan="1">Watts</th>
+            <th colspan="1">Passthrough</th>
+            <th colspan="1">AnalogIn</th>
+            <th colspan="1">AnalogOut</th>
+            <th colspan="1">DigitalIn</th>
+            <th colspan="1">DigitalOut</th>
+            <th colspan="1">UHSII</th>
+            <th colspan="1">ASIN</th>
+        </tr>
+        <tr>
+            <th colspan="3">Manufacturer</th>
+            <th colspan="1">Host</th>
+            <th colspan="1">Thunderbolt</th>
+            <th colspan="1">USBA</th>
+            <th colspan="2">USBC</th>
+            <th colspan="1">Video</th>
+            <th colspan="1">Ethernet</th>
+            <th colspan="2">Power</th>
+            <th colspan="4">Audio</th>
+            <th colspan="1">SDCard</th>
+            <th colspan="1">Purchase</th>
+        </tr>
+    </tfoot>
+</table>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#example').DataTable( {
+        dom: 'Qlfrtip'
+    });
+});
+</script>

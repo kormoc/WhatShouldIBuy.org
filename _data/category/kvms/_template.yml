@@ -1,0 +1,108 @@
+---
+Page:
+  Title: KVM switchs
+Template:
+  - Manufacturer:
+    - Brand
+    - Model
+    - Model Number
+    - URL
+    - Warranty
+  - Status:
+    - Release Date
+    - Discontinued Date
+  - Input - USB C:
+    - 3.1 Gen 1
+    - 3.1 Gen 2
+    - 3.2 Gen 1
+    - 3.2 Gen 2
+    - 3.2 Gen 1×2
+    - 3.2 Gen 2×2
+    - Total
+  - Input - USB:
+    - 2.0
+    - 3.0
+    - 3.1 Gen 1
+    - 3.1 Gen 2
+    - 3.2 Gen 1
+    - 3.2 Gen 2
+    - Total
+  - Input - HDMI:
+    - 1.0
+    - 1.1
+    - 1.2
+    - 1.3
+    - 1.4
+    - 2.0
+    - 2.0b
+    - 2.1
+    - Total
+  - Input - Displayport:
+    - 1.0
+    - 1.1
+    - 1.2
+    - 1.2a
+    - 1.3
+    - 1.4
+    - 1.4a
+    - 2.0
+    - Total
+  - Output - USB C:
+    - 3.1 Gen 1
+    - 3.1 Gen 2
+    - 3.2 Gen 1
+    - 3.2 Gen 2
+    - 3.2 Gen 1×2
+    - 3.2 Gen 2×2
+    - Total
+  - Output - USB:
+    - 2.0
+    - 3.0
+    - 3.1 Gen 1
+    - 3.1 Gen 2
+    - 3.2 Gen 1
+    - 3.2 Gen 2
+    - Total
+  - Output - HDMI:
+    - 1.0
+    - 1.1
+    - 1.2
+    - 1.3
+    - 1.4
+    - 2.0
+    - 2.0b
+    - 2.1
+    - Total
+  - Output - Displayport:
+    - 1.0
+    - 1.1
+    - 1.2
+    - 1.2a
+    - 1.3
+    - 1.4
+    - 1.4a
+    - 2.0
+    - Total
+  - Audio:
+    - Analog Stereo In
+    - Analog Stereo Out
+    - Digital Optical In
+    - Digital Optical Out
+  - Features:
+    - LCD Display
+    - Power Switch
+    - EDID Emulation
+    - Firmware Upgradable
+    - Rack Mountable
+    - Serial Console
+  - Port Selection:
+    - Buttons
+    - Keyboard Hotkeys
+    - IR Remote
+    - Serial Console
+
+Visibility:
+  Manufacturer/Brand: Yes
+  Manufacturer/Model: Yes
+  Purchase/MSRP: Yes
+  Purchase/ASIN: Yes

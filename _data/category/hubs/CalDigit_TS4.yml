@@ -1,0 +1,91 @@
+---
+Manufacturer/Brand: CalDigit
+Manufacturer/Model: TS4
+Manufacturer/Model Number:
+Manufacturer/URL: https://www.caldigit.com/thunderbolt-station-4/
+Manufacturer/Warranty:
+Status/Release Date:
+Status/Discontinued Date:
+Host/Interface: Thunderbolt 4
+Power/Watts: 98
+Power/Passthrough: No
+Thunderbolt/1:
+Thunderbolt/2:
+Thunderbolt/3:
+Thunderbolt/4: 2
+USB C/3.1 Gen 1:
+USB C/3.1 Gen 2:
+USB C/3.2 Gen 1:
+USB C/3.2 Gen 2: 3
+USB C/3.2 Gen 1×2:
+USB C/3.2 Gen 2×2:
+USB/2.0:
+USB/3.0:
+USB/3.1 Gen 1:
+USB/3.1 Gen 2:
+USB/3.2 Gen 1:
+USB/3.2 Gen 2: 5
+HDMI/1.0:
+HDMI/1.1:
+HDMI/1.2:
+HDMI/1.3:
+HDMI/1.4:
+HDMI/2.0:
+HDMI/2.0b:
+HDMI/2.1:
+Displayport/1.0:
+Displayport/1.1:
+Displayport/1.2:
+Displayport/1.2a:
+Displayport/1.3:
+Displayport/1.4: 1
+Displayport/1.4a:
+Displayport/2.0:
+Ethernet/1 GB:
+Ethernet/2.5 GB: 1
+Ethernet/5 GB:
+Ethernet/10 GB:
+Audio/Analog Stereo In: 1
+Audio/Analog Stereo Out: 2
+Audio/Digital Optical In:
+Audio/Digital Optical Out: 1
+SD Card/SD:
+SD Card/HS-SD:
+SD Card/UHS-I:
+SD Card/UHS-II: 1
+SD Card/UHS-III:
+SD Card/SD-Express:
+microSD Card/SD:
+microSD Card/HS-SD:
+microSD Card/UHS-I:
+microSD Card/UHS-II: 1
+microSD Card/UHS-III:
+microSD Card/SD-Express:
+Cable/Replacable: Yes
+Cable/Type: Thunderbolt 4 - Passive
+Physical - Imperial/Height: 5.55"
+Physical - Imperial/Width: 1.65"
+Physical - Imperial/Length: 4.46"
+Physical - Imperial/Weight: 1.41 lbs
+Physical - Imperial/Cable Length:
+Physical - Metric/Height: 141 mm
+Physical - Metric/Width: 42 mm
+Physical - Metric/Length: 113 mm
+Physical - Metric/Weight: 0.64 kg
+Physical - Metric/Cable Length:
+Security/Slot: Yes
+Purchase/MSRP: $379.99
+Purchase/Manufacturer: https://shop.caldigit.com/us/Docking%20Stations?product_id=212
+Purchase/ASIN: B09GK8LBWS
+Reviews:
+  - Site: TechRadar
+    Url: https://www.techradar.com/reviews/caldigit-ts3-plus-thunderbolt-3-docking-station
+    Rating: 4.5/5
+  - Site: MacWorld
+    Url: https://www.macworld.com/article/667861/caldigit-thunderbolt-station-3-plus-ts3-plus-dock-review.html
+    Rating: 4.5/5
+  - Site: MacRumors
+    Url: https://www.macrumors.com/review/caldigit-ts3-plus-dock/
+    Rating: Generally Positive
+Notes: |
+  All USB/USB C ports support 1.5A/7.5W power output

@@ -1,0 +1,33 @@
+---
+Page:
+  Title: Monitors
+Template:
+  - Manufacturer:
+    - Brand
+    - Model
+    - Model Number
+    - URL
+    - Warranty
+  - Status:
+    - Release Date
+    - Discontinued Date
+  - Panel:
+    - Size - diagonal
+    - Type
+    - Resolution
+    - Refresh Rate Hz
+    - G2G Response Time
+    - MPRT Response Time
+    - Color Gamut
+    - Backlight
+    - Surface
+  - Panel Features:
+    - FreeSync
+    - HDR
+    - GSync
+
+Visibility:
+  Manufacturer/Brand: Yes
+  Manufacturer/Model: Yes
+  Purchase/MSRP: Yes
+  Purchase/ASIN: Yes

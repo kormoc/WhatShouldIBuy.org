@@ -1,0 +1,154 @@
+---
+---
+
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ site.data.category[page.category]._template.Page.Title }} - WhatShouldIBuy.org</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.bootstrap5.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/datetime/1.1.2/css/dataTables.dateTime.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/searchpanes/2.0.2/css/searchPanes.bootstrap5.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.4.0/css/select.bootstrap5.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/css/datatables.css"/>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">What Should I Buy?</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            {%- for category in site.data.category -%}
+                                <li><a class="dropdown-item" href="/category/{{ category[0] }}.html">{{ category[1]._template.Page.Title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h1>{{ site.data.category[page.category]._template.Page.Title }}</h1>
+
+    <section id="content">
+        {{ content }}
+    </section>
+
+    <section id="table">
+      <div class="dtsp-verticalContainer">
+      <div class="dtsp-verticalPanes"></div>
+      <table id="datatable" class="table table-striped display nowrap compact " style="width:100%">
+        <thead>
+            <tr>
+                {%- for tabledata in site.data.category[page.category]._template.Template -%}
+                {%- for tabledata in tabledata -%}
+                    <th colspan="{{ tabledata[1] | size }}">{{ tabledata[0] }}</th>
+                {% endfor %}
+                {%- endfor -%}
+            </tr>
+            <tr>
+                {%- for tabledata in site.data.category[page.category]._template.Template -%}
+                {%- for tabledata in tabledata -%}
+                    {%- for tablesubdata in tabledata[1] -%}
+                        {%- assign datakey = tabledata[0] | append:'/' | append:tablesubdata -%}
+                        <th class="{{ datakey | replace:' ','_' }}">{{ tablesubdata }}</th>
+                    {% endfor %}
+                {%- endfor -%}
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {%- for entry in site.data.category[page.category] -%}
+                {%- if entry[0] == '_template' -%}
+                    {%- continue -%}
+                {%- endif -%}
+                <tr>
+                     {%- for tabledata in site.data.category[page.category]._template.Template -%}
+                     {%- for tabledata in tabledata -%}
+                        {%- assign total = 0 -%}
+                        {%- for tablesubdata in tabledata[1] -%}
+                            {%- assign datakey = tabledata[0] | append:'/' | append:tablesubdata -%}
+                            {%- if tablesubdata != 'Total' -%}
+                                {%- assign total = total | plus: entry[1][datakey] -%}
+                                <td>{{ entry[1][datakey] }}</td>
+                            {%- else -%}
+                                <td>{{ total }}</td>
+                            {%- endif -%}
+                        {%- endfor -%}
+                    {%- endfor -%}
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    </section>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.bootstrap5.min.js"></script>
+    <!-- <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.colVis.min.js"></script> -->
+    <script type="text/javascript" src="/assets/js/buttons.colVis.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/datetime/1.1.2/js/dataTables.dateTime.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/searchpanes/2.0.2/js/dataTables.searchPanes.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/searchpanes/2.0.2/js/searchPanes.bootstrap5.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/select/1.4.0/js/dataTables.select.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var table =  $('#datatable').DataTable( {
+                dom: '<"dtsp-dataTable"Bfrtip>',
+                searchPanes: {
+                    layout: 'columns-1',
+                    initCollapsed: true
+                },
+                buttons: [
+                    'colvis'
+                ],
+                columnDefs: [
+                    {%- for tabledata in site.data.category[page.category]._template.Template -%}
+                    {%- for tabledata in tabledata -%}
+                        {%- for tablesubdata in tabledata[1] -%}
+                            {%- assign datakey = tabledata[0] | append:'/' | append:tablesubdata -%}
+                            {%- assign datatitle = tabledata[0] | append:' - ' | append:tablesubdata -%}
+                            {
+                                searchBuilderTitle: '{{ datatitle }}',
+                                targets: '{{ datakey | replace:' ','_' }}',
+                                visible: {% if site.data.category[page.category]._template.Visibility[datakey] %}true{% else %}false{% endif %},
+                                searchPanes: {
+                                    header: '{{ datatitle }}',
+                                    name: '{{ datatitle }}',
+                                },
+                            },
+                        {% endfor %}
+                    {%- endfor -%}
+                    {%- endfor -%}
+                ]
+            });
+            table.searchPanes()
+            $("div.dtsp-verticalPanes").append(table.searchPanes.container());
+        });
+    </script>
+  </body>
+</html>
