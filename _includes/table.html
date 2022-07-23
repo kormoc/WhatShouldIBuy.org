@@ -15,7 +15,10 @@
             dom: '<"dtsp-dataTable"Bfrtip>',
             searchPanes: {
                 layout: 'columns-1',
-                initCollapsed: true
+                initCollapsed: true,
+                controls: false,
+                cascadePanes: true,
+                orderable: false,
             },
             buttons: [
                 'colvis'
@@ -33,6 +36,7 @@
                             searchPanes: {
                                 header: '{{ datatitle }}',
                                 name: '{{ datatitle }}',
+                                className: 'searchPanes_cat_tabledata[0]',
                             },
                         },
                     {% endfor %}
