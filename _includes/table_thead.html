@@ -1,0 +1,19 @@
+<thead>
+    <tr>
+        {%- for tabledata in include._template.Template -%}
+        {%- for tabledata in tabledata -%}
+            <th colspan="{{ tabledata[1] | size }}">{{ tabledata[0] }}</th>
+        {% endfor %}
+        {%- endfor -%}
+    </tr>
+    <tr>
+        {%- for tabledata in include._template.Template -%}
+        {%- for tabledata in tabledata -%}
+            {%- for tablesubdata in tabledata[1] -%}
+                {%- assign datakey = tabledata[0] | append:'/' | append:tablesubdata -%}
+                <th class="{{ datakey | replace:' ','_' }}">{{ tablesubdata }}</th>
+            {% endfor %}
+        {%- endfor -%}
+        {% endfor %}
+    </tr>
+</thead>

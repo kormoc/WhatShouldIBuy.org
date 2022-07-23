@@ -1,0 +1,46 @@
+<section id="table">
+  <div class="dtsp-verticalContainer">
+  <div class="dtsp-verticalPanes"></div>
+    <table id="datatable" class="table table-striped display nowrap compact " style="width:100%">
+      {% include table_thead.html _template=include._template %}
+      {% include table_tbody.html _template=include._template %}
+    </table>
+  </div>
+</section>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        var table =  $('#datatable').DataTable( {
+            pageLength: -1,
+            dom: '<"dtsp-dataTable"Bfrtip>',
+            searchPanes: {
+                layout: 'columns-1',
+                initCollapsed: true
+            },
+            buttons: [
+                'colvis'
+            ],
+            columnDefs: [
+                {%- for tabledata in include._template.Template -%}
+                {%- for tabledata in tabledata -%}
+                    {%- for tablesubdata in tabledata[1] -%}
+                        {%- assign datakey = tabledata[0] | append:'/' | append:tablesubdata -%}
+                        {%- assign datatitle = tabledata[0] | append:' - ' | append:tablesubdata -%}
+                        {
+                            searchBuilderTitle: '{{ datatitle }}',
+                            targets: '{{ datakey | replace:' ','_' }}',
+                            visible: {% if include._template.Visibility[datakey] %}true{% else %}false{% endif %},
+                            searchPanes: {
+                                header: '{{ datatitle }}',
+                                name: '{{ datatitle }}',
+                            },
+                        },
+                    {% endfor %}
+                {%- endfor -%}
+                {%- endfor -%}
+            ]
+        });
+        table.searchPanes()
+        $("div.dtsp-verticalPanes").append(table.searchPanes.container());
+    });
+</script>

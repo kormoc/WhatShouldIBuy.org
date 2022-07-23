@@ -1,0 +1,23 @@
+<tbody>
+    {%- for entry in site.data.category[page.category] -%}
+        {%- if entry[0] == '_template' -%}
+            {%- continue -%}
+        {%- endif -%}
+        <tr>
+             {%- for tabledata in include._template.Template -%}
+             {%- for tabledata in tabledata -%}
+                {%- assign total = 0 -%}
+                {%- for tablesubdata in tabledata[1] -%}
+                    {%- assign datakey = tabledata[0] | append:'/' | append:tablesubdata -%}
+                    {%- if tablesubdata != 'Total' -%}
+                        {%- assign total = total | plus: entry[1][datakey] -%}
+                        <td>{{ entry[1][datakey] }}</td>
+                    {%- else -%}
+                        <td>{{ total }}</td>
+                    {%- endif -%}
+                {%- endfor -%}
+            {%- endfor -%}
+            {% endfor %}
+        </tr>
+    {% endfor %}
+</tbody>
