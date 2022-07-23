@@ -2,7 +2,7 @@
 ---
 {%- assign _template = site.data.category[page.category]._template -%}
 
-{% include header.html %}
+{% include header.html title=_template.Page.Title %}
 
 <h1>{{ _template.Page.Title }}</h1>
 
